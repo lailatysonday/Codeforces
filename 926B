@@ -1,0 +1,39 @@
+/* 
+author: Sebastian - Codeforces: sebastianlord - rating  .
+I want to reach Expert as soon as possible because I want to the best in my city
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define _io_fast_ ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define __open__ freopen("Codeforces.inp", "r", stdin); freopen("Codeforces.out", "w", stdout);
+#define _1stbegin_ int main()
+#define _2ndbegin_ signed main()
+#define MOD 1000000007
+#define ll long long
+
+
+void solve (){
+    int n, k;
+    cin >> n >> k;
+    if(k % 2 == 0){
+        int x = (4 * n) - 2;
+        if(k == x) cout << k / 2 + 1 << '\n';
+        else cout << k / 2 << '\n';
+    }
+    else{
+        cout << k / 2 + 1 << '\n';
+    }
+}
+
+_1stbegin_{
+    _io_fast_;
+    __open__;
+    int t;
+    cin >> t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
