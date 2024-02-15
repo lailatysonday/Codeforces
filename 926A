@@ -1,0 +1,39 @@
+/* 
+author: Sebastian - Codeforces: sebastianlord - rating Newbie, 657.
+I want to reach Expert as soon as possible because I want to the best in my city
+*/
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#define _io_fast_ ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0);
+#define __open__ freopen("Codeforces.inp", "r", stdin); freopen("Codeforces.out", "w", stdout);
+#define _1stbegin_ int main()
+#define _2ndbegin_ signed main()
+#define MOD 1000000007
+#define ll long long
+
+int n;
+void solve(){
+	cin >> n;
+	vector<int> a(n); 
+	for(int i=0;i<n;i++){
+		cin >> a[i];
+	}
+	sort(a.begin(), a.end());
+	long long sum = 0;
+	for(int i=1;i<n;i++){
+		sum += a[i] - a[i - 1];
+	}
+	cout << sum << '\n';
+}
+
+_2ndbegin_{
+	_io_fast_;
+	__open__;
+	int t = 1;
+	cin >> t;
+	while(t--){
+		solve();
+	}
+}
